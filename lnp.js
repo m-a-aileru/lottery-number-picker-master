@@ -1,5 +1,3 @@
-// Version 2 JS
-
 var x = document.getElementsByTagName('p'); 
 
 // Event listeners
