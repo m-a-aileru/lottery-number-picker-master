@@ -1,3 +1,5 @@
+// v2
+
 var x = document.getElementsByTagName('p'); 
 
 // Event listeners
