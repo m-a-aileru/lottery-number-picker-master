@@ -8,21 +8,26 @@
 </head>
 <!-- v2 -->
 <body>
-    <div id="container">
+    <div class="container">
         <h1>LOTTERY NUMBER PICKER</h1>
     
-        <div id="balls">
-            <div class="ball"><p>?</p></div>
-            <div class="ball"><p>?</p></div>
-            <div class="ball"><p>?</p></div>
-            <div class="ball"><p>?</p></div>
-            <div class="ball"><p>?</p></div>
-            <div class="ball"><p>?</p></div>
+        <div class="balls">
+            <div class="ball ball-one"><span>?</span></div>
+            <div class="ball ball-two"><span>?</span></div>
+            <div class="ball ball-three"><span>?</span></div>
+            <div class="ball ball-four"><span>?</span></div>
+            <div class="ball ball-five"><span>?</span></div>
+            <div class="ball ball-six"><span>?</span></div>
         </div>
-    
-        <div id="instruction">Press 'D' or click the button below to draw or redraw the numbers.</div>    
+
+        <button class="" onclick="doSomething()">DRAW</button>
         
-        <div id="draw-button"><button onclick="drawOrRedraw();">DRAW/REDRAW</button></div>
+        
+        <!-- all this only for mobile
+        <div class="instruction">Press 'D' or click the button below to draw or redraw the numbers.</div>    
+    
+         -->
+        
     </div>
     
     <output id="result">x</output> 

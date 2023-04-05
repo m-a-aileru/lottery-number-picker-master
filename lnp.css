@@ -7,13 +7,19 @@ Styling for the "Lottery Number Picker" web app - v2.0.
     padding: 0;
 }
 
-body {
-    color: #0000ff;
-    font-family: "Estrangelo Edessa";
+html {
+    background-image: linear-gradient(to bottom right, blue, red);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-#container {
-    width: 100%;
+body {
+    color: #fff;
+    font-family: "Arial";    
+}
+
+.container {
+    border: 2px solid green;
     display: flex;
     flex-flow: column wrap;
 }
@@ -24,70 +30,83 @@ h1 {
     font-size: 7vw;
 }
 
-#balls {
+.balls {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: black;
     display: flex;
     flex-flow: row wrap;
-    margin: auto;
-    height: 375px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+    /* margin: auto; */
+    /* height: 375px; */
 }
 
-div.ball {
-    border: 2px solid blue;
-    /*border-radius: 50%;*/
+.ball {
+    border: 1px solid white;
+    /* border-radius: 50%; */
     border-radius: 100%;
-    background: red;
-    width: 50%;
-    height: 50%;
+    width: 35%;
+    min-width: 25%;
+    height: 40%;
+    min-height: 33%;
+    margin: 0.5em;
+    padding: 4em 0;
+    text-align: center;
+    /* min-height: 53%; */
 }
 
-div.ball p {
+.ball span {
     /*
     position: relative;
     top: 25%;
     left: 40%;
     */
-    text-align: center;
+    /* text-align: center; */
     /*margin-top: 30%;*/
-    margin-top: 40px;
-    font-size: 12vw;
+    /* margin-top: 40px; */
+    font-size: 2.5em;
 }
 
-#instruction {
+.ball-one { background-color: rgba(255, 228, 196, 0.7);} /* 255, 228, 196 */
+.ball-two { background-color: rgba(240, 248, 255, 0.7);} /* 240, 248, 255 */
+.ball-three { background-color: rgba(255, 255, 0, 0.7); } /* 255, 255, 0 */
+.ball-four { background-color:rgba(144, 238, 144, 0.7); } /* 144, 238, 144 */
+.ball-five { background-color: rgba(255, 255, 255, 0.7); } /* 255, 255, 255 */
+.ball-six { background-color:rgba(255, 165, 0, 0.7); } /* 255, 165, 0 */
+
+.instruction {
     display: none;
 }
 
-#draw-button {
+.draw-numbers {
     
-    /*margin-top: 2%;*/
+    margin-top: 2%;
 }
 
 button {
-    /*
-    position: absolute;
-    top: 25%;
-    left: 40%;
-    */
-    background: blue;
-    color: red;
-    font-family: "Estrangelo Edessa";
+    background: rgba(255, 255, 255, 0.7);
+    color: white;
+    /* font-family: ""; */
     width: 50%; 
-    margin-top: 290px;
-    margin-left: 25%;
+    /* margin-top: 290px; */
+    /* margin-left: 25%; */
+    margin: auto;
+    margin-bottom: 3rem;
     /**
     padding: 12px;
     */
     padding: 4%;
-    border: 4px solid red;
-    border-radius: 5%;
+    border: 1px solid white;
+    /* border-radius: 5%; */
     font-size: 6vw;
     text-align: center;
     
 }
 
-button:hover {
-    background: red;
-    color: blue;
-    transition: background, color 0.5s;
+button:active {
+    background: rgba(0, 0, 0, 0.7);
+    /* transition: background, color 0.5s; */
 }
 
 #result {

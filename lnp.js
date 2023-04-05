@@ -1,50 +1,46 @@
 // v2
 
-var x = document.getElementsByTagName('p'); 
+let content = document.querySelectorAll('.ball')
 
-// Event listeners
-document.addEventListener("keydown", eventManager);
+function doSomething() {
+    // console.log(content[0].textContent)
+    
+    
 
-function generateRandomNumbers(a) {
-   for (var i = 0; i < a.length; i++) {
-       a[i].innerHTML = Math.round(Math.random()*48)+1;
-   }
-}
+    // for (number in content) {
+    //     console.log(content[number].textContent)
+    //     numArray.push(content[number].textContent)
+    // }
 
-function findDuplicates(b) {
-    for (var i = 0; i < b.length; i++) {
-        for (var j = i; j < b.length; j++) {
-            if (i !== j && b[i] == b[j]) {
-                b[j] = Math.ceil(Math.random()*49); /** draw a different number */
-               /** b[j] += "d";   - left in for future testing purposes */
-            } 
-        }
+    // for (let i = 0; i < content.length; i++) {
+    //     console.log(content[i].textContent)
+    //     numArray.push(content[i].textContent)
+    // }
+    // for (let i = 0; i < 6; i++) {
+    //     numArray.push(Math.ceil(Math.random() * 49))
+    //     content[i].textContent = numArray[i]
+    // }
+
+    let numSet = new Set(), numArray = []
+
+    /*
+    - while the set doesn't have 6 unique numbers in it
+        - fill the set with random numbers between 1 and 49
+    */
+    while (numSet.size !== 6) {
+        numSet.add(Math.ceil(Math.random() * 49))
+    }        
+ 
+    numArray = [...numSet]
+
+    for (let i = 0; i < 6; i++) {
+        content[i].textContent = numArray[i]
+        // console.log(numSet.values().next().value)
     }
-}
 
-function drawOrRedraw() {
-    generateRandomNumbers(x);
+    console.log(`This is the array: ${numArray}`)
+    console.log(`This is the set: ${numSet}`)
     
-    var nodeArray = [];
-    
-    // Create 'snapshot' of contents of the NodeList and put them into an array
-    for (var i = 0; i < x.length; ++i) {
-        nodeArray[i] = x[i].innerHTML;
-    }
-    
-    findDuplicates(nodeArray);
-    
-    for (var i = 0; i < nodeArray.length; ++i) {
-        x[i].innerHTML = nodeArray[i];
-    }
-    
-    return nodeArray;        
-}
+    // console.log(numSet.values().next().value)
 
-function eventManager(event) {
-    var x = event.key;
-    
-    if (x === "d" || x === "D") {
-        drawOrRedraw();
-    }
 }
