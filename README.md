@@ -26,7 +26,7 @@ There might very well be more features coming soon so watch this space for updat
 
 ## [Running the project]
 
-Link TBA
+As simple as clicking this link right here >>> https://lottery-number-picker.netlify.app
 
 ## [Dependencies]
 
